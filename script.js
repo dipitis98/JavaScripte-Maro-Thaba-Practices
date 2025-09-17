@@ -527,3 +527,11 @@
 // let unArray = noDuplicates(numbers)
 // console.log(`The unique array is ${unArray}`)
 
+// let a = 5
+// let b = 7
+// console.log(`a = ${a}, b = ${b}`)
+
+// let temp = a
+// a = b
+// b = temp
+// console.log(`a = ${a}, b = ${b}`)
