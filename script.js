@@ -535,3 +535,20 @@
 // a = b
 // b = temp
 // console.log(`a = ${a}, b = ${b}`)
+
+//                // Default //
+
+// function jogfol(a=0, b=0, c=0){
+//     let sum = a + b + c
+//     console.log(a, b, c)
+//     console.log(sum)
+//     return sum
+// }
+// jogfol()
+// jogfol(2, 6, 5)
+
+// function hishab(name = 'anonymous', deposit = 50) {
+//     console.log(name, deposit)
+// }
+// hishab()
+// hishab('Dip', 11000)
