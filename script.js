@@ -513,7 +513,7 @@
 // let dArray = doubleTheOdds(array1)
 // console.log('Doubled array is', dArray)
 
-                // NO DUPLICATES //
+//                 NO DUPLICATES //
 // function noDuplicates(array){
 //     let unique = []
 //     for (let element of array){
@@ -616,9 +616,9 @@
 // console.log(unknown())
 
 // const amount = (naam, pocketMoney) => {
-    //     return `${naam} has ${pocketMoney} taka in his pocket and division by 5 of it is ${pocketMoney / 5}.`
-    // }
-    // console.log(amount('Dip', 480))
+//         return `${naam} has ${pocketMoney} taka in his pocket and division by 5 of it is ${pocketMoney / 5}.`
+//     }
+//     console.log(amount('Dip', 480))
     
 // const addFirstnLast = array => {
 //     let add = array[0] + array[array.length - 1]
@@ -629,6 +629,80 @@
 // addFirstnLast(array1)
 // addFirstnLast(array2)
 
-const add2number = (a = 10, b = 5) => console.log(a + b)
-add2number()
-add2number(654,589)
+// const add2number = (a = 10, b = 5) => console.log(a + b)
+// add2number()
+// add2number(654,589)
+
+//                 // Destructuring Object //
+// const details = {
+//     name : 'Dip Paul',
+//     age : 26,
+//     role : 'Full-Stack Web Developer'
+// }
+// const {name, age, role} = details
+// console.log(name, age, role)
+// // property name change
+// const {name : naam, age : boyosh, role : bhumika} = details
+// console.log(naam, boyosh, bhumika)
+
+//                 // Destructuring Array //
+// const numbers = [10 , 20 , 30 , 40 , 50]
+// const [a,b,c,d,e] = numbers
+// console.log(e)
+
+//           // Destructuring from Function Return //
+// const doubleThem = (a, b) => [a * 2, b * 2]
+// const [x, y] = doubleThem(25, 12)
+// console.log(doubleThem(26,13));
+// console.log(x)
+// console.log(y)
+
+//        // Destructuring in Function Parameter (Object) //
+// const introduce = ({name = 'Guest', age = 'N/A'} = {}) => {
+//         console.log(`Hi! This is ${name.toUpperCase()} who is ${age} years old.`)
+//     }
+//     introduce()
+//     const user1 = {name : 'Dip', age : 26}
+//     introduce(user1)
+    
+//        // Destructuring in Function Parameter (Array) //
+// const sum = ([a = 0, b = 0] = []) => console.log(a + b)
+// let array = [65,219]
+// sum(array)
+// sum()
+
+// const product = {
+//     name : 'Laptop',
+//     brand : 'Dell',
+//     price : 50000
+// }
+// const {name, brand, price} = product
+// console.log(name, brand, price)
+
+// const colors = ['red', 'blue', 'green', 'yellow']
+// const [r, b, g, y] = colors
+// console.log(r, b)
+
+// let array = [32 , 654, 987]
+// const [first, second, third] = array
+// console.log(second)
+
+// const multiply = (a, b) => [a * 3, b * 3]
+// const [x, y] = multiply(6, 25)
+// console.log(x)
+// console.log(y)
+
+// const person = ({name = 'Guest', city = 'N/A'} = {}) => {
+//     console.log(`This is ${name} who resides in ${city}.`)
+// }
+// person()
+
+// const person = {name : 'Rahim', city : 'Dhaka'}
+// const {name , city, phone = "N/A"}  = person
+// console.log(name)
+// console.log(city)
+// console.log(phone)
+
+// const teacher = {name : 'Maria', profession : 'Teacher'}
+// const {name, profession : job} = teacher
+// console.log(`I love ${name} ${job}.😂`)
