@@ -536,7 +536,7 @@
 // b = temp
 // console.log(`a = ${a}, b = ${b}`)
 
-//                // Default //
+//                // Default Parameter //
 
 // function jogfol(a=0, b=0, c=0){
 //     let sum = a + b + c
@@ -552,3 +552,83 @@
 // }
 // hishab()
 // hishab('Dip', 11000)
+
+// function square(a=1){
+//     const sqr = a * a
+//     console.log(sqr)
+//     return sqr
+// }
+// square()
+// square(5)
+
+// function books (book = ['JS Book']) {
+//     console.log(book)
+// }
+// books()
+// books(['Tin Goyenda', 'Masud Rana', 'Science Fictions of Jafor Iqbal'])
+
+// function arrayDouble(array = [5,10,15]){
+//     console.log(array)
+//     let newArray = []
+//     for (let element of array){
+//         let double = element * 2
+//         newArray.push(double)
+//     }
+//     console.log(newArray)
+//     return newArray
+// }
+// let array = [26, 14, 97, 16, 20, 32]
+// arrayDouble(array)
+
+// function simpInt(object = {principal : 1000, rate : 5}){
+//     const interest = object.principal * object.rate / 100
+//     console.log(`Amount of simple interest is ${interest}.`)
+//     return interest
+// }
+// let obj = {
+//     principal : 10000,
+//     rate : 7.2
+// }
+// simpInt()
+// simpInt(obj)
+
+//                     // Arrow Function //
+
+// const amount = (object ={salary : 50000, tax : 10}) => {
+//     const netAmount = object.salary - object.salary * object.tax / 100
+//     console.log(`Initial salary is ${netAmount}.`)
+//     return netAmount
+// }
+// amount()
+// amount({salary : 72000, tax : 7})
+
+// const firstIndexValue = array => console.log(array[1])
+// let array1 = [10,20,30,40,50]
+// let array2 = [23,6582,196,25494,2590,854]
+// firstIndexValue(array1)
+// firstIndexValue(array2)
+
+// const multiplication =  (a, b, c) => a * b * c
+// console.log(multiplication(2,3,4))
+// console.log(multiplication(654,18,987 * Math.random()))
+
+// const unknown = () => "unknown"
+// console.log(unknown())
+
+// const amount = (naam, pocketMoney) => {
+    //     return `${naam} has ${pocketMoney} taka in his pocket and division by 5 of it is ${pocketMoney / 5}.`
+    // }
+    // console.log(amount('Dip', 480))
+    
+// const addFirstnLast = array => {
+//     let add = array[0] + array[array.length - 1]
+//     console.log(add)
+// }
+// let array1 = [10,20,30,40,50]
+// let array2 = [23,6582,196,25494,2590,854]
+// addFirstnLast(array1)
+// addFirstnLast(array2)
+
+const add2number = (a = 10, b = 5) => console.log(a + b)
+add2number()
+add2number(654,589)
