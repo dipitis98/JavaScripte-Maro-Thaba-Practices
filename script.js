@@ -633,31 +633,45 @@
 // add2number()
 // add2number(654,589)
 
-//                 // Destructuring Object //
-// const details = {
-//     name : 'Dip Paul',
-//     age : 26,
-//     role : 'Full-Stack Web Developer'
-// }
-// const {name, age, role} = details
-// console.log(name, age, role)
-// // property name change
-// const {name : naam, age : boyosh, role : bhumika} = details
-// console.log(naam, boyosh, bhumika)
 
-//                 // Destructuring Array //
+//                 // Destructuring => Object //
+
+//    Object destructuring এর মূল উদ্দেশ্য কী?
+//    => কোড ছোট ও পড়তে সহজ করা। property আলাদা করতে বারবার details.name লিখতে হয় না।
+
+//    যদি কোন property object-এ না থাকে, destructuring করলে কী হবে?
+//    => ভ্যারিয়েবলের মান হবে undefined।
+
+
+// const details = {
+    //     name : 'Dip Paul',
+    //     age  : 26,
+    //     role : 'Full-Stack Web Developer'
+    // }
+    // const {name, age, role} = details // Object-এর property গুলো আলাদা ভ্যারিয়েবলে ভেঙে নেওয়া হচ্ছে।
+    // console.log(name, age, role)
+    // // property name change
+    // const {name : naam, age : boyosh, role : bhumika} = details // property গুলোকে alias নামে নতুন ভ্যারিয়েবল বানানো হচ্ছে।
+    // console.log(naam, boyosh, bhumika)
+    
+    //    Property না থাকলে default value কিভাবে সেট করবেন?
+    //    => const {country = 'Bangladesh'} = details
+    //    Alias + Default value একসাথে কিভাবে দিবেন?
+    //    => const {role: bhumika = "Developer"} = details;
+
+//                 // Destructuring => Array //
 // const numbers = [10 , 20 , 30 , 40 , 50]
-// const [a,b,c,d,e] = numbers
+// const [a,b,c,d,e] = numbers // Array-এর প্রতিটি element আলাদা ভ্যারিয়েবলে রাখা হচ্ছে।
 // console.log(e)
 
-//           // Destructuring from Function Return //
+//           // Destructuring => from Function Return //
 // const doubleThem = (a, b) => [a * 2, b * 2]
 // const [x, y] = doubleThem(25, 12)
 // console.log(doubleThem(26,13));
 // console.log(x)
 // console.log(y)
 
-//        // Destructuring in Function Parameter (Object) //
+//        // Destructuring => in Function Parameter (Object) //
 // const introduce = ({name = 'Guest', age = 'N/A'} = {}) => {
 //         console.log(`Hi! This is ${name.toUpperCase()} who is ${age} years old.`)
 //     }
@@ -665,7 +679,7 @@
 //     const user1 = {name : 'Dip', age : 26}
 //     introduce(user1)
     
-//        // Destructuring in Function Parameter (Array) //
+//        // Destructuring => in Function Parameter (Array) //
 // const sum = ([a = 0, b = 0] = []) => console.log(a + b)
 // let array = [65,219]
 // sum(array)
@@ -706,3 +720,101 @@
 // const teacher = {name : 'Maria', profession : 'Teacher'}
 // const {name, profession : job} = teacher
 // console.log(`I love ${name} ${job}.😂`)
+
+//                  // Rest Operator //
+
+// const product = {
+//     name : 'Laptop',
+//     price : 50000,
+//     brand : 'Dell'
+// }
+// const {name, ...rest} = product
+// console.log(rest)
+
+// const programmer = {
+//     name : "Sophia",
+//     language : "JavaScript",
+//     experience : 5,
+//     speciality : "Front-End",
+//     tools : "React"
+// }
+// const {language, speciality, ...details} = programmer
+// console.log(details)
+
+// const addNums = (a, ...nums) => {
+//     let sum = 0
+//     for (let num of nums) {
+//         sum += num
+//     }
+//     let avg = sum / nums.length
+//     console.log(`Average of ${nums} is ${avg}`)
+//     // return avg
+// }
+// addNums(2, 3, 4, 5)
+
+
+//                  // Spread Operator //
+
+// const numbers = [5, 13, 26, 1, 25, 17, 18, 19, 100, 6, 106]
+// console.log(...numbers) // spread operator প্রতিটা উপাদানকে আলাদা আলাদা করে দেয়
+// const arrayMax = Math.max(...numbers)
+// console.log(arrayMax)
+
+// const friends = [4, 5, 87, 9]
+// const dosto = [...friends] // [] নিয়ে friends এর উপাদানগুলো আলাদা আলাদা করে dosto নামক নতুন array তে COPY করা হয়েছে
+// console.log(dosto)
+// // friends.push(100)
+// dosto.push(100)
+// console.log(dosto)
+// console.log(friends)
+
+// const shongkha = [...friends, 1987] // COPY করার সময় নতুন উপাদানও কমা (,) দিয়ে যোগ করা যায়
+// console.log(shongkha)
+
+// const array1 = [1, 2, 3, 4, 5]
+// const array2 = [6, 7, 8, 9, 10]
+// const combinedArray = [...array1, ...array2] // দুইটা array'র উপাদানগুলোকে একসাথে নতুন আরেকটা array-তে নেওয়া হয়েছে
+// console.log(combinedArray)
+
+// const person = {
+//     name : "Dip",
+//     age: 27
+// }
+// const clonedPerson = {...person} // object কে clone করতে {} ব্যবহার করতে হয়।
+// console.log(clonedPerson)
+
+// const updatedPerson = {...person, hobby : "Music"} // কমা(,) দিয়ে নতুন property, value add করা যায়।
+// console.log(updatedPerson)
+
+// Exercise:
+// 01.
+const technologies = ['condition', 'array', 'loop']
+const variables = [...technologies]
+console.log(variables)
+
+// 02.
+const fruits = ['Apple', 'Banana', "Mango"]
+const myFruits = [...fruits, "Papaya", "Orange"]
+console.log(myFruits)
+
+// 03.
+const frontEnd = ["JavaScript"]
+const backEnd = ["Node.Js"]
+const database = ["MongoDB"]
+const একত্রিত = [...frontEnd, ...backEnd, ...database]
+console.log(একত্রিত)
+
+// 04.
+const website = {name : "MySite", type : "e-commerce", status : "active"}
+const updatedWebsite = {...website, theme : 'Dark'}
+console.log(updatedWebsite)
+
+// 05.
+const young = {name: 'Arif', age : 30, address : 'B-Baria'}
+const {address, ...rest} = young // Object destructuring
+console.log(rest)
+
+// 06.
+const car = {make :'Toyota', model : 'Corolla', year : 2020}
+const updatedCar = {...car, year : 2032}
+console.log(updatedCar)
